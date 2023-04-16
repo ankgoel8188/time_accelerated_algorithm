@@ -1,0 +1,27 @@
+Project ##.##,Date,File Name,Extension,Description,Notes
+2001,2023-02-05,InstantaneousCostEM1,.slx,Attempts to compute thetaHat using the exact minimizer method on instantaneous cost,"thetaHat oscillitates, in the time accelerated optimizer paper it is written in eq 25-26 (as of 2023-02-06)"
+2001,2023-02-05,InstantaneousCostGD1,.slx,Computes thetaHat using the gradient descent method on instantaneous cost,"though oscillitates, converges to the correct value, is eq 19 on paper (as of 2023-02-06)"
+2001,2023-02-06,CumulativeCostEM1,.slx,"Computes thetaHat using the exact minimizer on the cumulative cost, with an ADJUSTABLE lambda","correctly works, converges faster in presence of lambda > 0"
+2001,2023-02-06,CumulativeCostGD1,.slx,"Computes thetaHat using the gradient descent method on the cumulative cost, with an ADJUSTABLE lambda","correctly works, converges faster in presence of lambda > 0"
+2002,2023-02-07,MasterTest01,.slx,Combines the previous P2001 files and outputs all of their results,
+2002,2023-02-07,EstimatorConclusionsSix,.m,Uses data from P2002 MasterTest01 to yield plot showcasing the results,
+2003,2023-02-08,FiniteTimeEstimator1,.slx,Utilizes the finite time algorithm,
+2003,2023-02-08,MasterTest01,.slx,"Duplicate of P2002 MasterTest01, but excludes Instantaneous Cost EM, and includes finite",
+2003,2023-02-08,EstimatorConclusionsWithFinite,.m,"Duplicate of P2002 EstimatorConclusionsSix, but used for MasterTest01",
+2003,2023-02-10,FiniteTimeParameterEffects,.m,"Runs P2003 FiniteTimeEstimator.slx, but with custom inputs for each variable, while varying them, and plots the results",
+2004,2023-02-12,QualityCheckingNNScript,.m,,
+2005,2023-02-14,CumulativeCostGDEffectsVector,.slx,Uses adjustable lambda to compute thetaHat on the vector form of P2001 CumulativeCostGD1,requires 'lambda' to be defined in workspace
+2005,2023-02-14,CumulativeCostGDEffectOfLambda,.m,"Runs P2005 CumualtiveCostGDEffectsVector for lambda values 0, 2, …, 10, and exports a semilogy plot of result",
+2005,2023-02-15,CumulativeCostEMEffectsVector,.slx,Uses adjustable P0 via scalar p0 to compute thetaHat on the vector form of P2001 CumulativeCostEM1,"requires 'p0' to be defined in workspace, A initial is [0; 0]"
+2005,2023-02-15,CumulativeCostEMEffectOfp0Vector,.m,"Runs P2005 CumualtiveCostEMEffectsVector for p0 values 0, 0.2, …, 1, and exports a semilogy plot of result",
+2006,2023-03-13,ApproximationMethodComparison,.py,"Compares different optimizers: stochastic, stochastic with adam, batch, batch with adam",
+2007,2023-03-19,EffectOfBatchSize,.py,"Determines effect of batch size (where 1 is stochastic), both with and without adam",
+2007,2023-03-19,PlottingEffectsOfBatchSize,.m,"Plots results from P2007…py, which outputs in the directory Python/P2007_Files",
+2008,2023-03-20,GradientTapeAndFiniteTime,.py,Attempted to use TensorFlow's GradientTape to create custom optimizer. This project was cancelled and switched over to PyTorch (P2010),
+2009,,,.py,The entire series is used for learning PyTorch. Do not use except maybe for learning,
+2010,2023-03-24,DiscreteFT,.py,Implements the first finite time estimator on a one layer non-linear discrete problem,
+2010,2023-03-25,DiscreteFTEstimatorPlots,.m,"Generates plots using data from P2010…py to compare SGD, Adam, and FTE",
+2011,2023-03-27,FTEtheta0comparison,.py,"Like P2010, but runs each optimizer 10 times with different seed (i.e., weight/bias initialization)",
+2011,2023-03-27,DiscreteFTEtheta0,.m,Generates plots using data from P2011…py to confirm if P2010 is correct,
+2012,2023-03-30,FTEparameterEffects,.py,"Adjusts alpha, c, and DelT values to determine performance of a NN solved usingF?TE",
+2012,2023-03-30,FTEparameterEffects,.m,"Plots P2012…py, in a manner similar to P2003. The files are located in Pytorch/P2012/",

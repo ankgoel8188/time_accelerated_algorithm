@@ -1,0 +1,8 @@
+﻿Name,Descriptor,Required Inputs,Parameters,Outputs,Status
+NeuralLayer,Simulates a neural layer,,,,Success
+NNfull,Computes output of each neural layer as a cell,,,,Success
+ATJ_ComputerFull,Computes A * Theta^T * J as cells as seen in equation 49 of https://arxiv.org/pdf/2211.17217.pdf; only single sample can be used,,,,
+Dtheta_hat_Computer,Computes Dtheta (derivative),,,,
+optimizerStochastic,"Stochastic optimizer, check 'GradientDescent' for how to use it",,,,
+optimizerBatch,"Batch optimizer, check 'GradientDescent' for how to use it",,,,
+GradientDescent,"A full gradient descent script. Can only do batch and stochastic. Relu, sigmoid, and none are the only allowed activation functions. Check P2004…m to determine usage",,,,
